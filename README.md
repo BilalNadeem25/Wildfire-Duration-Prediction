@@ -7,3 +7,6 @@ Proactive efforts for fire suppression can help alleviate the challenges faced b
   <img src="Images/data-collection-&-processing.png" width="1000">
 </p>
 
+<p align="center">
+  <img src="Images/predictive-modeling.png" width="1000">
+</p>
