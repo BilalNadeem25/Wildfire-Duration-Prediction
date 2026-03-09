@@ -10,3 +10,18 @@ Proactive efforts for fire suppression can help alleviate the challenges faced b
 <p align="center">
   <img src="Images/predictive-modeling.png" width="1000">
 </p>
+
+## Repository Structure
+
+### Data
+This folder contains the following:
+1) Raw historical fire hotspots data extracted from the FIRMS database saved as zipped csv files. These datasets are referred to as M-C61, SV-C2, J1V-C2 and J2V-C2. M-C61 dataset comprises fire occurrences recorded by the MODIS instrument aboard the Aqua and Terra satellites, with a total of 1,538,815 rows. SV-C2 dataset contains fire records gathered by the VIIRS instrument aboard the Suomi National Polar-orbiting Partnership (S-NPP) satellite, consisting of 3,425,056 rows. J1V-C2 and J2V-C2 datasets also contain fire hotspots recorded by the VIIRS radiometer but equipped by the National Oceanic and Atmospheric Administration – 20 (NOAA-20), each having 1,220,010 and 121,144 rows. The data from the S-NPP satellite is uploaded in year-wise batches in parquet format to comply with Git file limits.
+2) Processed fire events which are a result of spatio-temporal clustering saved as `fire_events.csv`.
+3) Feature extractions saved as csv files which are products of Google Earth Engine and feature extraction python scripts.
+4) The final consolidated dataset with fire events merged with all feature extractions saved as `Fire Events - Feature Enriched.csv`.
+   
+### Scripts
+This folder contains the following:
+1) The main python notebook `Data Science Research Project.ipynb` that performs all the key stages of the project - from data collection and processing to developing the predictive model and analyzing results.
+2) Javascripts from Google Earth Engine to extract the meteorological, topographic and vegetation features saved as .js files.
+3) Python scripts for extracting anthropogenic features from OpenStreetMap.
